@@ -24,7 +24,6 @@ playBtn.addEventListener('click', function(){
 
 
     const bombNumber = 16;
-    
     const arrayBombs = [];
 
    while (arrayBombs.length < bombNumber){
@@ -36,12 +35,10 @@ playBtn.addEventListener('click', function(){
    }
    
 
-
-
     const bigBox = document.getElementById('big-box');
     bigBox.innerHTML = ''; // Serve per svuotare bigbox ogni volta che viene cliccato il tasto play 
 
-    console.log(arrayBombs);
+    console.log('Arraybombs:',arrayBombs);
     
     for (let i = 1; i <= boxNumber; i++){
 
@@ -65,11 +62,7 @@ playBtn.addEventListener('click', function(){
         })
     }
     
-    
 })
-
-
-
 
 
 //******* FUNCTION ******

@@ -31,6 +31,14 @@ header .container{
     justify-content: space-around;
 }
 
+h1{
+    color: rgb(238, 238, 39);
+}
+
+select{
+    text-transform: uppercase;
+}
+
 /* *** MAIN *** */
 
 main{
@@ -60,6 +68,7 @@ main{
 
 .active{
     background-color: dodgerblue;
+    color: white
 }
 
 .boom{
@@ -69,5 +78,5 @@ main{
 
 /* *** FOOTER *** */
 
-/* *** DEBUG *** */
+
 
