@@ -55,6 +55,11 @@ main{
     justify-content: center;
     align-items: center;
     border: 1px solid white;
+    cursor: pointer;
+}
+
+.active{
+    background-color: dodgerblue;
 }
 
 /* *** FOOTER *** */
