@@ -24,7 +24,7 @@ playBtn.addEventListener('click', function(){
 
 
     const bombNumber = 16;
-
+    
     const arrayBombs = [];
 
    while (arrayBombs.length < bombNumber){
@@ -34,15 +34,16 @@ playBtn.addEventListener('click', function(){
            arrayBombs.push(randomNum);
        }
    }
-   // console.log(arrayBombs);
+   
 
 
 
     const bigBox = document.getElementById('big-box');
-    bigBox.innerHTML = ''; // Serve per sfuotare bigbox ogni folta che viene cliccato il tasto play 
+    bigBox.innerHTML = ''; // Serve per svuotare bigbox ogni volta che viene cliccato il tasto play 
+
+    console.log(arrayBombs);
     
     for (let i = 1; i <= boxNumber; i++){
-
 
         const box = createItem(i,boxOnARow);
 
@@ -51,18 +52,20 @@ playBtn.addEventListener('click', function(){
 
         box.addEventListener('click', function(){
             
-            // if(arrayBombs.includes(this.textContent)){
-            //     this.classList.add('boom');
-            // }else{
-                this.classList.add('active');
-            // }  
-        })
-        // console.log(box);
-        // for (let j = 0; j < arrayBombs.length; j++){
-            // }
-    }
-    console.log(arrayBombs);
+            for (let i =0; i < arrayBombs.length; i++){
+                if (box.textContent == arrayBombs[i]){
+                    box.classList.add('boom');
+                }else{
+                    box.classList.add('active');
+                } 
+                // console.log(arrayBombs[i]); 
+            }
+            console.log(box.textContent);
 
+        })
+    }
+    
+    
 })
 
 
@@ -77,7 +80,7 @@ function createItem(i,boxOnARow){
     const size = `calc(100% / ${boxOnARow})`;
     //aggiunge al div dei quadrati la classe del css
     box.classList.add('cubox');
-    //Aggunge lunghezza ed altezza con style inline
+    //Aggiunge lunghezza ed altezza con style inline
     box.style.width = size;
     box.style.height = size;
         
