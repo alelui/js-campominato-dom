@@ -1,12 +1,6 @@
-// alert('Ciaone');
 
 const playBtn = document.getElementById('play');
-// console.log(playBtn);
-
 playBtn.addEventListener('click', function(){
-
-    const bigBox = document.getElementById('big-box');
-    bigBox.innerHTML = '';
 
     const levelSelected = parseInt(document.getElementById('level').value);
     // console.log(levelSelected);
@@ -27,8 +21,28 @@ playBtn.addEventListener('click', function(){
     let boxOnARow = Math.sqrt(boxNumber);
     // console.log(boxNumber);
     // console.log(boxOnARow);
+
+
+    const bombNumber = 16;
+
+    const arrayBombs = [];
+
+   while (arrayBombs.length < bombNumber){
+       let randomNum = (Math.floor(Math.random() * boxNumber + 1));
+       // esegue un controllo per evitare di inserire un numero gia presente nell'array
+       if (!arrayBombs.includes(randomNum)){
+           arrayBombs.push(randomNum);
+       }
+   }
+   // console.log(arrayBombs);
+
+
+
+    const bigBox = document.getElementById('big-box');
+    bigBox.innerHTML = ''; // Serve per sfuotare bigbox ogni folta che viene cliccato il tasto play 
     
     for (let i = 1; i <= boxNumber; i++){
+
 
         const box = createItem(i,boxOnARow);
 
@@ -36,12 +50,22 @@ playBtn.addEventListener('click', function(){
         bigBox.appendChild(box);
 
         box.addEventListener('click', function(){
-            this.classList.add('active');
+            
+            // if(arrayBombs.includes(this.textContent)){
+            //     this.classList.add('boom');
+            // }else{
+                this.classList.add('active');
+            // }  
         })
+        // console.log(box);
+        // for (let j = 0; j < arrayBombs.length; j++){
+            // }
     }
-
+    console.log(arrayBombs);
 
 })
+
+
 
 
 

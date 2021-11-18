@@ -62,6 +62,11 @@ main{
     background-color: dodgerblue;
 }
 
+.boom{
+    background-color: firebrick;
+    color: black;
+}
+
 /* *** FOOTER *** */
 
 /* *** DEBUG *** */
