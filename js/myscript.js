@@ -39,7 +39,7 @@ playBtn.addEventListener('click', function(){
         box.style.height = size;
 
         box.innerHTML = i
-        //Inserisce l'lemento box creata, con tutte le modifiche, all interno del padre
+        //Inserisce l'elemento box creato, con tutte le modifiche, all'interno del padre
         bigBox.appendChild(box);
     }
 
@@ -49,6 +49,6 @@ playBtn.addEventListener('click', function(){
 })
 
 
-function (num){
-    
-}
+// function (num){
+
+// }
