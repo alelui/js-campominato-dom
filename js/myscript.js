@@ -41,11 +41,13 @@ playBtn.addEventListener('click', function(){
         box.innerHTML = i
         //Inserisce l'elemento box creato, con tutte le modifiche, all'interno del padre
         bigBox.appendChild(box);
+        
+        box.addEventListener('click', function(){
+            this.classList.add('active');
+        })
     }
 
-    box.addEventListener('click', function(){
-        this.classList.add('active');
-    })
+
 })
 
 
